@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Nila Traders offers premium quality dry fruits like almonds, cashews, walnuts, and raisins at competitive prices. Shop now!">
+    <meta name="keywords" content="dry fruits, almonds, cashews, walnuts, raisins, Nila Traders, premium dry fruits">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nila Traders - Dry Fruits</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+      <style>
+            *{
+                  margin: 0;
+            }
+    /* Contact Section Styles */
+.contact-section {
+      padding: 50px 5%;
+      background: #fff;
+      margin: 20px 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .contact-section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #4CAF50;
+    }
+    
+    .contact-section p {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 30px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    
+    /* Contact Info Container */
+    .contact-info {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    /* Contact Details & Form Styling */
+    .contact-details, .contact-form {
+      flex: 1 1 45%;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .contact-details h3, .contact-form h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #4CAF50;
+    }
+    
+    .contact-details p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+    
+    /* Form Styling */
+    .contact-form .form-group {
+      margin-bottom: 15px;
+    }
+    
+    .contact-form label {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 5px;
+      color: #333;
+    }
+    
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .contact-form textarea {
+      resize: vertical;
+    }
+    
+    /* Submit Button */
+    .submit-btn {
+      background: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 100%;
+    }
+    
+    .submit-btn:hover {
+      background: #45a049;
+    }
+    
+    /* Google Maps Styling */
+    .map {
+      margin-top: 40px;
+    }
+    
+    .map h3 {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #4CAF50;
+    }
+    
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
+      border-radius: 8px;
+    }
+    
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      .contact-info {
+        flex-direction: column;
+        gap: 15px;
+      }
+    
+      .contact-details, .contact-form {
+        flex: 1 1 100%;
+      }
+    
+      .contact-section h2 {
+        font-size: 1.8rem;
+      }
+    
+      .contact-section p {
+        font-size: 1rem;
+      }
+    
+      .submit-btn {
+        font-size: 1rem;
+      }
+    }
+    
+    @media screen and (max-width: 480px) {
+      .contact-section {
+        padding: 30px 5%;
+      }
+    
+      .contact-section h2 {
+        font-size: 1.6rem;
+      }
+    
+      .contact-section p {
+        font-size: 0.95rem;
+      }
+    
+      .contact-details, .contact-form {
+        padding: 15px;
+      }
+    
+      .submit-btn {
+        font-size: 0.9rem;
+        padding: 8px;
+      }
+    }
+    
+      </style>
+    <header>
+        <h1>Nila Traders</h1>
+        <p>Your trusted source for premium dry fruits!</p>
+        <!-- <input type="text" id="search" placeholder="Search for products..." oninput="filterProducts()" aria-label="Search for products"> -->
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cart.html">Cart</a>
+        <a href="about.html">About</a>
+        <a href="contact.html"class="active">Contact</a>
+    </nav>
+
+    <section class="contact-section">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Whether you have a question about our products, need assistance, or just want to say hello, feel free to reach out to us.</p>
+  
+        <div class="contact-info">
+          <div class="contact-details">
+            <h3>Our Address</h3>
+            <p><strong>Nila Traders</strong><br>
+            123 Dry Fruits Street,<br>
+            Madurai, Tamil Nadu - 625001<br>
+            India</p>
+            <p><strong>Phone:</strong> +91 98765 43210</p>
+            <p><strong>Email:</strong> info@nilatraders.com</p>
+          </div>
+  
+          <div class="contact-form">
+            <h3>Send Us a Message</h3>
+            <form action="#" method="post">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+              </div>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+  
+        <div class="map">
+          <h3>Find Us on Google Maps</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.123456789012!2d78.12345678901234!3d9.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b000123456789ab%3A0x1234567890abcdef!2sNila%20Traders!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+            width="100%"
+            height="400"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Nila Traders. All rights reserved.</p>
+        <div class="footer-icons">
+            <a href="https://www.facebook.com/nilatraders" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/nilatraders" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com/nilatraders" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

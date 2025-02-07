@@ -30,6 +30,7 @@ function addToCart(id, name, price) {
     showNotification(`${name} added to cart!`);
 }
 
+
 // Function to display cart items
 function displayCartItems() {
     const cartItemsDiv = document.getElementById('cart-items');
@@ -145,3 +146,35 @@ function showNotification(message) {
 if (window.location.pathname.includes('cart.html')) {
     displayCartItems();
 }
+
+function filterProducts() {
+    let input = document.getElementById('search').value.toLowerCase();
+    let products = document.querySelectorAll('.product');
+    
+    products.forEach(product => {
+        let productName = product.textContent.toLowerCase();
+        if (productName.includes(input)) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+
+document.getElementById("checkout-form").addEventListener("submit", function (event) {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let orderSummary = "Order Summary:\n";
+
+    cart.forEach(item => {
+        orderSummary += `${item.name} - ₹${item.price.toFixed(2)} x ${item.quantity} = ₹${(item.price * item.quantity).toFixed(2)}\n`;
+    });
+
+    const totalAmount = document.getElementById("total-price").textContent;
+    orderSummary += `Total: ₹${totalAmount}`;
+
+    // Assign order summary to the hidden input
+    document.getElementById("order-summary-input").value = orderSummary;
+});
+
+
+

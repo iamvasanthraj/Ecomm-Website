@@ -1,0 +1,116 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Ensures the body is a flex container and centers the card */
+}
+
+/* Container */
+.thank-you-container {
+    perspective: 1000px;
+}
+
+/* Floating Card */
+.thank-you-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transform-style: preserve-3d;
+    animation: float 3s ease-in-out infinite;
+    width: 100%; /* Make sure it takes up 100% width inside its parent */
+    max-width: 500px; /* Max width to prevent it from growing too large */
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotateY(0);
+    }
+    50% {
+        transform: translateY(-20px) rotateY(10deg);
+    }
+}
+
+/* Text Styles */
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Confetti */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ff0;
+    border-radius: 50%;
+    animation: confetti-fall 5s linear infinite;
+    will-change: transform;
+}
+
+/* Confetti Animation */
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+/* Confetti Positions */
+.confetti:nth-child(1) { left: 10%; animation-delay: 0s; }
+.confetti:nth-child(2) { left: 20%; animation-delay: 1s; }
+.confetti:nth-child(3) { left: 30%; animation-delay: 2s; }
+.confetti:nth-child(4) { left: 40%; animation-delay: 3s; }
+.confetti:nth-child(5) { left: 50%; animation-delay: 4s; }
+.confetti:nth-child(6) { left: 60%; animation-delay: 5s; }
+.confetti:nth-child(7) { left: 70%; animation-delay: 6s; }
+.confetti:nth-child(8) { left: 80%; animation-delay: 7s; }
+.confetti:nth-child(9) { left: 90%; animation-delay: 8s; }
+.confetti:nth-child(10) { left: 100%; animation-delay: 9s; }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .thank-you-card {
+        padding: 1rem; /* Reduced padding */
+        width: 90%; /* Reduced width on mobile */
+        max-width: 350px; /* Further reduced max width for smaller screens */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Smaller heading font size */
+    }
+
+    p {
+        font-size: 1rem; /* Smaller paragraph font size */
+    }
+
+    .confetti {
+        width: 8px; /* Smaller confetti size */
+        height: 8px; /* Smaller confetti size */
+    }
+}
+
+/* Reduce Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .thank-you-card, .confetti {
+        animation: none;
+    }
+}

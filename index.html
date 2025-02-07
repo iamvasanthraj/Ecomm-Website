@@ -13,19 +13,19 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to Nila Traders</h1>
+        <h1>Nila Traders</h1>
         <p>Your trusted source for premium dry fruits!</p>
         <input type="text" id="search" placeholder="Search for products..." oninput="filterProducts()" aria-label="Search for products">
     </header>
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.html"class="active">Home</a>
         <a href="cart.html">Cart</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
     </nav>
     <div class="products">
         <div class="product" data-id="1" data-name="Almonds" data-price="800">
-            <img src="images/almonds.jpg" alt="Almonds" class="product-image">
+            <img src="images/Almonds.jpg" alt="Almonds" class="product-image">
             <h2>Almonds</h2>
             <p>₹800 per kg</p>
             <label for="quantity-1">Quantity:</label>
@@ -33,7 +33,7 @@
             <button onclick="addToCart(1, 'Almonds', 800, document.getElementById('quantity-1').value)" aria-label="Add Almonds to Cart">Add to Cart</button>
         </div>
         <div class="product" data-id="2" data-name="Cashews" data-price="1200">
-            <img src="images/cashews.jpg" alt="Cashews" class="product-image">
+            <img src="images/Cashews.jpg" alt="Cashews" class="product-image">
             <h2>Cashews</h2>
             <p>₹1200 per kg</p>
             <label for="quantity-2">Quantity:</label>
@@ -56,6 +56,24 @@
             <input type="number" id="quantity-4" name="quantity" min="1" value="1">
             <button onclick="addToCart(4, 'Raisins', 420, document.getElementById('quantity-4').value)" aria-label="Add Raisins to Cart">Add to Cart</button>
         </div>
+        <div class="product" data-id="5" data-name="honey" data-price="120">
+            <img src="images/Honey.jpg" alt="honey" class="product-image">
+            <h2>Honey</h2>
+            <p>₹120 per kg</p>
+            <label for="quantity-5">Quantity:</label>
+            <input type="number" id="quantity-5" name="quantity" min="1" value="1">
+            <button onclick="addToCart(5, 'Honey', 120, document.getElementById('quantity-5').value)" aria-label="Add Honey to Cart">Add to Cart</button>
+        </div>
+        <div class="product" data-id="6" data-name="Pistha" data-price="350">
+            <img src="images/Pistha.jpg" alt="Pistha" class="product-image">
+            <h2>Pistha</h2>
+            <p>₹350 per kg</p>
+            <label for="quantity-6">Quantity:</label>
+            <input type="number" id="quantity-6" name="quantity" min="1" value="1">
+            <button onclick="addToCart(6, 'Pistha', 350, document.getElementById('quantity-6').value)" aria-label="Add Pistha to Cart">Add to Cart</button>
+        </div>
+
+        
     </div>
     <div id="notification" class="notification"></div>
     <button id="back-to-top" onclick="scrollToTop()" aria-label="Back to Top">
