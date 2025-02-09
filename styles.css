@@ -49,9 +49,9 @@ nav a:hover, nav button:hover {
 /* Container for Products */
 .products {
 display: grid;
-grid-template-columns: repeat(2, 1fr); /* Two items per row */
+grid-template-columns: repeat(3, 1fr); /* Two items per row */
 gap: 20px; /* Space between items */
-max-width: 900px;
+max-width: 1200px;
 margin: 5px auto;
 padding: 20px;
 }
